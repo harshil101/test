@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Bisauli</string>
     <string name="btn_navigation">Navigation</string>
+    <string name="tab_text_1">NAME</string>
+    <string name="tab_text_2">DATE</string>
+    <string name="tab_text_3">STATUS</string>
 </resources>
