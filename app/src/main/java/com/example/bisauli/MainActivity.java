@@ -1,6 +1,9 @@
 package com.example.bisauli;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.bisauli.ui.main.fragments.LoginFragment;
 
 public class MainActivity extends AppCompatActivity {
     private final String TAG = MainActivity.class.getSimpleName();
@@ -21,24 +26,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG,"onCreateCalled()");
 
-        btn_navigation = findViewById(R.id.btn_navigation);
-        et_login = findViewById(R.id.et_email);
-        et_password = findViewById(R.id.et_password);
+        initiateFragment();
 
-        btn_navigation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (TextUtils.isEmpty(et_login.getText().toString().trim())){
-                    Toast.makeText(MainActivity.this, "Email is empty", Toast.LENGTH_SHORT).show();
-                }else if (TextUtils.isEmpty(et_password.getText().toString().trim())){
-                    Toast.makeText(MainActivity.this, "Password is empty", Toast.LENGTH_SHORT).show();
-                }else {
-                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            }
-        });
     }
 
     @Override
@@ -69,5 +58,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.i(TAG,"onDestroyCalled()");
+    }
+
+    private void initiateFragment(){
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.main_fragment,new LoginFragment(),"LoginFragment");
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }
