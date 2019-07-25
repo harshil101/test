@@ -7,35 +7,35 @@
     tools:context=".ui.main.fragments.SignUpFragment">
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <EditText
-        android:id="@+id/et_firstName"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:hint="First Name"
-        android:layout_weight="1"
-        android:textColor="#000000"
-        android:inputType="textEmailAddress"
-        android:textColorHint="@color/colorAccent"/>
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/et_secondName"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Second Name"
-        android:textColor="#000000"
-        android:inputType="textEmailAddress"
-        android:textColorHint="@color/colorAccent"/>
+        <EditText
+            android:id="@+id/et_firstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:hint="First Name"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            android:textColorHint="@color/colorAccent" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/et_secondName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:hint="Second Name"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            android:textColorHint="@color/colorAccent" />
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/et_email"
@@ -43,9 +43,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:hint="Email"
-        android:textColor="#000000"
         android:inputType="textEmailAddress"
-        android:textColorHint="@color/colorAccent"/>
+        android:textColor="#000000"
+        android:textColorHint="@color/colorAccent" />
 
     <EditText
         android:id="@+id/et_password"
@@ -53,9 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:hint="Password"
-        android:textColor="#000000"
         android:inputType="textPassword"
-        android:textColorHint="@color/colorAccent"/>
+        android:textColor="#000000"
+        android:textColorHint="@color/colorAccent" />
 
     <EditText
         android:id="@+id/et_confirmPassword"
@@ -63,32 +63,33 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:hint="Confirm Password"
-        android:textColor="#000000"
         android:inputType="textPassword"
-        android:textColorHint="@color/colorAccent"/>
+        android:textColor="#000000"
+        android:textColorHint="@color/colorAccent" />
 
     <EditText
         android:id="@+id/et_phoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:hint="Confirm Password"
+        android:hint="Phone No"
+        android:inputType="number"
+        android:maxLength="10"
         android:textColor="#000000"
-        android:inputType="textPassword"
-        android:textColorHint="@color/colorAccent"/>
+        android:textColorHint="@color/colorAccent" />
 
     <Button
         android:id="@+id/btn_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/login_button"
         android:text="Sign up"
         android:textColor="#ffffff"
-        android:textSize="20sp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/login_button"
-        android:layout_gravity="center"/>
+        android:textSize="20sp" />
 
 
 </LinearLayout>
